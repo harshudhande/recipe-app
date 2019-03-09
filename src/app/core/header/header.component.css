@@ -1,0 +1,22 @@
+ul{
+ list-style-type:none;
+ text-align:center;
+ 
+ }
+li {
+  margin: 10px;
+  font-size: 18px;
+  text-align:center;
+}
+#website {
+  height: auto;
+  font-size: 35px;
+  font-style:italic;
+  color:red;
+}
+#home{  
+
+  margin-bottom:20px;
+   font-size:20px;
+}
+

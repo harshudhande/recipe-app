@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\recipes",
+    "\\app\\recipes\\recipe-detail",
+    "\\app\\recipes\\recipe-list",
+    "\\app\\recipes\\recipe-list\\recipe-item",
+    "\\app\\shopping-list",
+    "\\app\\shopping-list\\shopping-edit"
+  ],
+  "SelectedNode": "\\app",
+  "PreviewInSolutionExplorer": false
+}

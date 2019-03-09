@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-default"><!--navbar-deafult will give grey color navigation bar-->
+  <div class="container-fluid"><!--use whole page space-->
+    <div class="navbar-header">
+      <a class="active navbar-brand" href="#" id="website">
+        PerfectRecipes</a>
+         <!--navbar-brand shows barnd like websitename or home-->
+    </div>
+    <div class="collapse navbar-collapse">
+      <!--collapse big menu on small screen-->
+      <ul class="navbar navbar-nav">
+        <!--add elements to navigation bar-->
+        <li><a style="{cursor:pointer}" routerLink="/" appHighlightlink>Recipe Book</a></li>
+        <li><a [routerLink]="['recipes']" routerLinkActive="active" appHighlightlink>Recipes</a></li>
+        <li><a [routerLink]="['shopping-list']" routerLinkActive="active" appHighlightlink>Shopping-List</a></li>
+
+      </ul><ng-template [ngIf]="!isAuthenticated()">
+        <ul class="navbar navbar-nav navbar-right">
+          <!--add dropdown sympbol-->
+          <li>
+            <a style="{cursor:pointer}" [routerLink]="['signup']" class="glyphicon glyphicon-user" appHighlightlink>
+              SignUp
+            </a>
+          </li>
+          <li>
+            <a style="{cursor:pointer}" [routerLink]="['signin']" class="glyphicon glyphicon-log-in" appHighlightlink>
+              Login
+            </a>
+          </li>
+
+        </ul>
+      </ng-template>
+           <ul class="navbar navbar-nav navbar-right" *ngIf="isAuthenticated()">
+             <li><a (click)="onLogOut()" style="{cursor:pointer}" appHighlightlink>LogOut</a></li>
+             <li class="dropdown" appDropdownDirective >
+               <a class="dropdown-toggle" type="button" appHighlightlink>
+                 Manage
+                 <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+                 <li><a style="{cursor:pointer}" (click)="saveData()" appHighlightlink> Save Data</a></li>
+                 <li class="divider"></li>
+                 <li><a style="{cursor:pointer}" (click)="fetchData()" appHighlightlink>Fetch Data</a></li>
+               </ul>
+             </li>
+
+           </ul>
+      
+
+    </div>  
+  </div>
+</nav>

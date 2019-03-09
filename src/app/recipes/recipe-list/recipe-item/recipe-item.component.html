@@ -1,0 +1,13 @@
+<a style="{cursor:pointer}" class="list-group-item clearfix"
+   [routerLink]="[id]" routerLinkActive="active">
+
+  <!--clearfix uses to avoid overlapping of list items-->
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{recipeElement.recipeName}}</h4>
+    <p class="'list-group-item-text">{{recipeElement.description}}</p>
+  </div>
+  <div class="pull-right">
+    <!-- src using property binding can also use string interpolation like src="{{recipeElement.imagePath}} " -->
+    <img class="img-rounded" [src]="recipeElement.imagePath" alt="{{recipeElement.recipeName}}" style="max-height:50px" />
+  </div>
+</a>
